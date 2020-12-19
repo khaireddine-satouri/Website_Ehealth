@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./css/metabolisme.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/8c3203e62c.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <nav class="menu">
+        <div id="logo"><a class="logo1" href="./index.html"><i class="fas fa-laptop-medical"></i> Santé</a></div>
+        
+     <ul id="rmenu">
+        <li ><a class="menu-item" href="./index.html">À propos</a></li> 
+        <li ><a class="menu-item" id="active" href="#">Diagnostiques et bilans</a>
+            <div class="content">
+                <div class="drop">
+                    <ul>
+                      <li><a class="drop-item" href="./imc.html">Mon IMC</a></li>
+                      <li> <a class="drop-item" href="./img.html">Mon IMG</a></li>
+                      <li><a class="drop-item" href="./metabolisme.html">Ma catégorie de poids </a></li>
+                      <li><a class="drop-item" href="./besoincal.html">Mon besoin caloriques </a></li>
+                    </ul>
+                </div> 
+              </div> 
+        </li>
+        <li ><a class="menu-item" href="#">Nutrition</a>
+            <div class="content">
+                <div class="drop">
+                    <ul>
+                      <li><a class="drop-item" href="./malnutrition.html">La malnutrition en question</a></li>
+                      <li> <a class="drop-item" href="./equilibre.html">Equilibre et divresité alimentaire</a></li>
+                      <li><a class="drop-item" href="./regime.html">Régime alimentaire sain </a></li>
+                      <li><a class="drop-item" href="./nutsport.html">Guide de nutrition pour les sportif</a></li>
+                     
+                    </ul>
+                </div> 
+              </div>
+        </li>
+        <li ><a class="menu-item"  href="#">Sport et Exercices</a>
+            <div class="content">
+                <div class="drop">
+                    <ul>
+                      <li><a  class="drop-item" href="./athlete.html">Contrôler ma fréquence cardiaque</a></li>
+                      <li><a  class="drop-item" href="./precotion.html">Les précautions à prendre</a></li>
+                      <li> <a  class="drop-item" href="./exmaigrir.html">Bouger pour maigrir </a></li>
+                      <li   class="item2"><a class="drop-item" href="#">Exercices à domicile</a>  
+                       
+                         <ul id="menuex">
+                           <li><a  class="menuex-item" href="./exmuscle.html">Exercices pour renforcer les muscles</a></li>
+                           <li><a  class="menuex-item" href="./exsouplesse.html">Exercices pour améliorer sa souplesse</a></li>
+                           <li><a  class="menuex-item" href="./exarticulateur.html">Exercices pour améliorer sa mobilité articulaire</a></li>
+                           
+                         </ul>
+                       
+                      </li>
+                    </ul>
+                </div> 
+              </div></li>
+     </ul>
+    
+    </nav>
+    <section class="background">
+        <div class="animation">
+            <span></span>
+<span></span>
+<span></span>
+<span></span>
+        
+    <form id="bilan" onsubmit="return validiter(event)">
+        <h2 class="title_form">Tous à propos mon poids</h2> <br>
+        <select name="sexe" id="sexe" required>
+            
+            <option value="" disabled selected hidden>sexe</option>
+            <option  value="male" >Homme</option>
+            <option  value="femele">Femme</option>
+        
+        </select> <br>
+        <label for="age">Age :</label><br>
+        <input  type="number" id="age" placeholder="ans"required> <br>
+        <label for="taille">Taille :</label><br>
+        <input  type="number" id="taille" placeholder="cm"required> <br>
+        <label for="poid">Poids :</label> <br>
+        <input  type="number" id="poid" placeholder="kg"required> <br>
+        <br> <input type="submit" id="calcul" value="faire le bilan" style="padding:5px ; border-radius: 20px; background-color: #42dbd6; font-weight:bold; font-size:1em;">  
+        <p style="color:red;" id="erreur"></p>
+    </form>
+</div>
+</section>
+<center>
+    <main>
+<h1>Connaître votre catégorie de poids et votre poids idéal</h1>
+<h2>Pour quoi une catégorie de poids ?</h2>
+<div class="rightimg"><img src="./res/poids-ideal_2.jpg" alt=""></div>
+<div>
+    <p class="lefttext">L'OMS (Organisation mondiale de la santé) a classifié les poids des 
+        personnes selon des critére specifiques (le poid et la tialle).
+    En effet, l'indice de masse Corporelle (IMC) nous permet de Connaître
+notre catégories de poids et conclure s'il y'a des risques médicale donc il est trés important 
+de Connaître dans quelle catégorie nous sommes pour bien controler nos modes de vie
+et améliorer ou bien corriger nos états physiques actuel.</p>
+<h1>Calculez votre poids idéal</h1>
+<h2>Avec la formule de Lorentz !!!</h2>
+<p>Le poids idéal… Tout un programme ! On passe notre temps à courir après 
+    mais sait-on réellement ce qu’il signifie au juste ? Le poids idéal, 
+    c’est celui avec lequel vous vous sentez bien. Chacune a le sien en 
+    fonction de sa taille, de son sexe et de son âge, de sa morphologie… 
+    Rien ne sert donc de comparer son poids idéal à celui de ses voisines ! 
+    Avant de partir à la guerre contre les kilos, calculez-le d’abord en un 
+    clic grâce à notre outil simplifié, inspiré de la formule de Lorentz.</p>
+    <p>
+        Cette formule est beaucoup utilisée de nos jours pour calculer le poids idéal d’une personne. Elle s’inspire d’une autre formule qui est la formule de Broca, mais ajoute un coefficient proportionnel à la taille de l’individu et différent selon le sexe. Bien que facile à utiliser, et sans avoir besoin de calculatrice, la formule de Broca ne prenait pas en compte de nombreux critères, c’est pourquoi la formule de Lorentz à vu le jour en 1929. Contrairement à d’autres formules, la formule de Lorentz ne prend pas en compte l’âge des individus et leur morphologie. Afin d’utiliser cette formule de calcul du poids idéal, il est nécessaire d’avoir plus de 18 ans et d’avoir une taille comprise entre 140 cm et 220 cm. Pour calculer son poids idéal grâce à cette formule, voici la démarche :
+    </p>
+    <p class="formule"><strong > Poids idéal pour une femme = Taille (en cm) - 100 - ([Taille (en cm) - 150] / 2,5)</strong> <br>
+    <strong > Poids idéal pour un homme = Taille (en cm) - 100 - ([Taille (en cm) - 150] / 4)  </strong> </p>
+</div>
+</main>
+</center>
+<footer>
+    <center>
+    <p>Travail réaliser par "<strong> KHAIREDIDNE SATOURI </strong>" étudiant tunisien.</p>
+    <p>Tous les informations ont été écrites aprés des recherches personnelles depuis des références fiables.</p>
+ </center>
+    <div class="leftfooter">
+     <p style="font-size: 1.3em;padding-bottom: 5px;"> Contact :</p>
+ <a href="https://www.facebook.com/profile.php?id=100004369659961"><i class="fab fa-facebook-square"></i></a><br>
+ <a href="https://www.linkedin.com/in/khaireddine-satouri-ba80091ab/?lipi=urn%3Ali%3Apage%3Ad_flagship3_feed%3BagBNq71XRJ%2B8cfAEJYIdRA%3D%3D"><i class="fab fa-linkedin"></i></a>
+  </div>
+  <div class="rightfooter">
+ <p style="font-size: 1.3em; padding-bottom: 5px;">Référence :</p>
+ <li> <a href="https://www.who.int/fr">www.who.int</a> </li>
+ <li><a href="https://www.fourchette-et-bikini.fr/">www.fourchette-et-bikini.fr</a></li>
+ <li><a href="https://www.alpiniste.fr/">www.alpiniste.fr</a></li>
+ <li><a href="https://www.kalenji.fr/">www.kalenji.fr</a></li>
+ <li><a href="https://fr.wikihow.com/Accueil">fr.wikihow.com</a></li>
+ <li><a href="https://www.mangerbouger.fr/">www.mangerbouger.fr</a></li>
+  
+ </div>
+</footer>   
+   <script src="./js/calcul.js"></script>
+
+</body>
+</html>

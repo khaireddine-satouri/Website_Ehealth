@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/8c3203e62c.js" crossorigin="anonymous"></script>
+   <link rel="stylesheet" href="./css/img.css">
+</head>
+<body>
+    
+    <nav class="menu">
+        <div id="logo"><a class="logo1" href="./index.html"><i class="fas fa-laptop-medical"></i> Santé</a></div>
+        
+     <ul id="rmenu">
+        <li ><a class="menu-item" href="./index.html">À propos</a></li> 
+        <li ><a class="menu-item" id="active" href="#">Diagnostiques et bilans</a>
+            <div class="content">
+                <div class="drop">
+                    <ul>
+                      <li><a class="drop-item" href="./imc.html">Mon IMC</a></li>
+                      <li> <a class="drop-item" href="./img.html">Mon IMG</a></li>
+                      <li><a class="drop-item" href="./metabolisme.html">Ma catégorie de poids </a></li>
+                      <li><a class="drop-item" href="./besoincal.html">Mon besoin caloriques </a></li>
+                    </ul>
+                </div> 
+              </div> 
+        </li>
+        <li ><a class="menu-item" href="#">Nutrition</a>
+            <div class="content">
+                <div class="drop">
+                    <ul>
+                      <li><a class="drop-item" href="./malnutrition.html">La malnutrition en question</a></li>
+                      <li> <a class="drop-item" href="./equilibre.html">Equilibre et divresité alimentaire</a></li>
+                      <li><a class="drop-item" href="./regime.html">Régime alimentaire sain </a></li>
+                      <li><a class="drop-item" href="./nutsport.html">Guide de nutrition pour les sportif</a></li>
+                     
+                    </ul>
+                </div> 
+              </div>
+        </li>
+        <li ><a class="menu-item"  href="#">Sport et Exercices</a>
+            <div class="content">
+                <div class="drop">
+                    <ul>
+                      <li><a  class="drop-item" href="./athlete.html">Contrôler ma fréquence cardiaque</a></li>
+                      <li><a  class="drop-item" href="./precotion.html">Les précautions à prendre</a></li>
+                      <li> <a  class="drop-item" href="./exmaigrir.html">Bouger pour maigrir </a></li>
+                      <li   class="item2"><a class="drop-item" href="#">Exercices à domicile</a>  
+                       
+                         <ul id="menuex">
+                           <li><a  class="menuex-item" href="./exmuscle.html">Exercices pour renforcer les muscles</a></li>
+                           <li><a  class="menuex-item" href="./exsouplesse.html">Exercices pour améliorer sa souplesse</a></li>
+                           <li><a  class="menuex-item" href="./exarticulateur.html">Exercices pour améliorer sa mobilité articulaire</a></li>
+                           
+                         </ul>
+                       
+                      </li>
+                    </ul>
+                </div> 
+              </div></li>
+     </ul>
+    
+    </nav>
+    <section class="background">
+        <div class="animation">
+            <span></span>
+<span></span>
+<span></span>
+<span></span>
+    
+    <form id="bilan" onsubmit="return validiter(event)">
+        <h2 class="title_form">Je calule mon IMG</h2><br>
+        <select name="sexe" id="sexe" required>
+            <option value="" disabled selected hidden>sexe</option>
+            <option  value="male" >Homme</option>
+            <option  value="femele">Femme</option>
+        
+        </select> <br>
+        <label for="age">Age :</label><br>
+        <input  type="number" id="age" placeholder="ans"required> <br>
+        <label for="taille">Taille :</label><br>
+        <input  type="number" id="taille" placeholder="cm"required> <br>
+        <label for="poid">Poids :</label><br>
+        <input  type="number" id="poid" placeholder="kg"required> <br>
+       <br> <input type="submit" id="calcul" value="faire le bilan" style="padding:5px ; border-radius: 20px; background-color: #42dbd6; font-weight:bold; font-size:1em;">  
+        <p style="color:red;" id="erreur"></p>
+    </form>
+    </div>
+    </section>
+    <center>
+        <main>
+    <h1>Calculez votre IMG</h1>
+    <h2>Indice de Masse Grasse !!!</h2>
+    <div class="rightimg"><img src="./res/img.jpg" alt=""></div>
+    <div>
+        <p class="leftext">L’IMG, qu’est-ce que c’est ? C’est l’Indice de Masse Graisseuse. Grosso modo, 
+            cet indice, lié à l’IMC, 
+            nous permet de savoir si nous avons trop ou pas assez de graisse dans notre
+             corps. Attention, on peut être mince, avoir une masse musculaire faible et 
+             un IMG élevé… et inversement. Cet indice prend en compte votre poids 
+             (en kilos), votre taille (en centimètres), votre âge (en années) ainsi que 
+             votre sexe (0 pour les femmes, 1 pour les hommes). Pour les mathématiciennes, 
+             la formule de Duremberg vous permettra de calculer votre IMG : </p>
+             <P class="formule">
+            (1,2 x votre IMC) + (0,23 x votre âge) - (10,8 x votre sexe (femme = 0, homme =1)) - 5,4
+            </P>
+            <p>Le résultat de l’IMG s’interprète différemment selon le sexe</p>
+            <h2><strong>Pour les femmes :</strong></h2>
+            <p>Votre IMG doit être compris entre 25 et 30 %. S’il est inférieur à 25 %, 
+                vous n’avez pas assez de graisse dans votre corps. Inversement, s’il est 
+                supérieur à 30 %, 
+                vous avez trop de graisse dans votre corps.</p>
+            <h2><strong>Pour les hommes :</strong></h2>
+            <p>Votre IMG doit être compris entre 15 et 20 %. S’il est inférieur à 15 %, 
+                vous n’avez pas assez de graisse dans votre corps. Inversement, 
+                s’il est supérieur à 20 %, vous avez trop de graisse dans votre corps.</p>
+                <strong>TEST : </strong><a href="./metabolisme.html">vérifier ma catégorie de poids actuel</a>
+    </div>
+</main>
+</center>
+<footer>
+    <center>
+    <p>Travail réaliser par "<strong> KHAIREDIDNE SATOURI </strong>" étudiant tunisien.</p>
+    <p>Tous les informations ont été écrites aprés des recherches personnelles depuis des références fiables.</p>
+ </center>
+    <div class="leftfooter">
+     <p style="font-size: 1.3em;padding-bottom: 5px;"> Contact :</p>
+ <a href="https://www.facebook.com/profile.php?id=100004369659961"><i class="fab fa-facebook-square"></i></a><br>
+ <a href="https://www.linkedin.com/in/khaireddine-satouri-ba80091ab/?lipi=urn%3Ali%3Apage%3Ad_flagship3_feed%3BagBNq71XRJ%2B8cfAEJYIdRA%3D%3D"><i class="fab fa-linkedin"></i></a>
+  </div>
+  <div class="rightfooter">
+ <p style="font-size: 1.3em; padding-bottom: 5px;">Référence :</p>
+ <li> <a href="https://www.who.int/fr">www.who.int</a> </li>
+ <li><a href="https://www.fourchette-et-bikini.fr/">www.fourchette-et-bikini.fr</a></li>
+ <li><a href="https://www.alpiniste.fr/">www.alpiniste.fr</a></li>
+ <li><a href="https://www.kalenji.fr/">www.kalenji.fr</a></li>
+ <li><a href="https://fr.wikihow.com/Accueil">fr.wikihow.com</a></li>
+ <li><a href="https://www.mangerbouger.fr/">www.mangerbouger.fr</a></li>
+  
+ </div>
+</footer>   
+    <script src="./js/img.js"></script>
+
+</body>
+</html>

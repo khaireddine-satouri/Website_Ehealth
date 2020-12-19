@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/8c3203e62c.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./css/besoincal.css">
+</head>
+<body>
+ 
+        <nav class="menu">
+            <div id="logo"><a class="logo1" href="./index.html"><i class="fas fa-laptop-medical"></i> Santé</a></div>
+            
+         <ul id="rmenu">
+            <li ><a class="menu-item" href="./index.html">À propos</a></li> 
+            <li ><a class="menu-item" id="active" href="#">Diagnostiques et bilans</a>
+                <div class="content">
+                    <div class="drop">
+                        <ul>
+                          <li><a class="drop-item" href="./imc.html">Mon IMC</a></li>
+                          <li> <a class="drop-item" href="./img.html">Mon IMG</a></li>
+                          <li><a class="drop-item" href="./metabolisme.html">Ma catégorie de poids </a></li>
+                          <li><a class="drop-item" href="./besoincal.html">Mon besoin caloriques </a></li>
+                        </ul>
+                    </div> 
+                  </div> 
+            </li>
+            <li ><a class="menu-item" href="#">Nutrition</a>
+                <div class="content">
+                    <div class="drop">
+                        <ul>
+                          <li><a class="drop-item" href="./malnutrition.html">La malnutrition en question</a></li>
+                          <li> <a class="drop-item" href="./equilibre.html">Equilibre et divresité alimentaire</a></li>
+                          <li><a class="drop-item" href="./regime.html">Régime alimentaire sain </a></li>
+                          <li><a class="drop-item" href="./nutsport.html">Guide de nutrition pour les sportif</a></li>
+                         
+                        </ul>
+                    </div> 
+                  </div>
+            </li>
+            <li ><a class="menu-item"  href="#">Sport et Exercices</a>
+                <div class="content">
+                    <div class="drop">
+                        <ul>
+                          <li><a  class="drop-item" href="./athlete.html">Contrôler ma fréquence cardiaque</a></li>
+                          <li><a  class="drop-item" href="./precotion.html">Les précautions à prendre</a></li>
+                          <li> <a  class="drop-item" href="./exmaigrir.html">Bouger pour maigrir </a></li>
+                          <li   class="item2"><a class="drop-item" href="#">Exercices à domicile</a>  
+                           
+                             <ul id="menuex">
+                               <li><a  class="menuex-item" href="./exmuscle.html">Exercices pour renforcer les muscles</a></li>
+                               <li><a  class="menuex-item" href="./exsouplesse.html">Exercices pour améliorer sa souplesse</a></li>
+                               <li><a  class="menuex-item" href="./exarticulateur.html">Exercices pour améliorer sa mobilité articulaire</a></li>
+                               
+                             </ul>
+                           
+                          </li>
+                        </ul>
+                    </div> 
+                  </div></li>
+         </ul>
+        
+        </nav>
+    
+        <section class="background">
+            <div class="animation">
+                <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+        <form id="bilan" onsubmit="return validiter(event)">
+            <h2 class="title_form">Je calule mon besoin calorique journalier</h2>
+            <select name="sexe" id="sexe" required>
+                
+                <option value="" disabled selected hidden>sexe</option>
+                <option  value="male" >Homme</option>
+                <option  value="femele">Femme</option>
+            
+            </select> <br>
+            <label for="age" >Age:</label> <br>
+            <input  type="number" id="age" placeholder="ans"required> <br>
+            <label for="taille">Taille:</label> <br>
+            <input  type="number" id="taille" placeholder="cm"required> <br>
+            <label for="poid">Poid:</label> <br>
+            <input  type="number" id="poid" placeholder="kg"required> <br>
+       
+            
+            <h4 id="choix">Veuillez séléctionner votre niveau d'activité physique par semaine :</h4> <br>
+           
+            <div class="activity">
+                <input class="champerreur2" name="activity" type="radio" id="choix1" value="1">
+                <label for="choix1">vous ne faites pas de sport ou 
+                    vous avez un mode de vie très sédentaire</label>
+            </div>
+            <div class="activity">
+                <input class="champerreur2" name="activity" type="radio" id="choix2" value="2">
+                <label for="choix2">vous avez une activité modérée (1 à 3 fois par semaine) 
+                    ou vous êtes légèrement actif</label>
+            </div>
+            <div class="activity">
+                <input class="champerreur2" name="activity" type="radio" id="choix3" value="3">
+                <label for="choix3">
+                  vous faites du sport 3 à 5 fois par semaine ou vous avez une vie très active
+                </label>
+            </div>
+            <div class="activity">
+                <input class="champerreur2" name="activity" type="radio" id="choix4" value="4">
+                <label for="choix4">
+                    vous faites du sport presque tous les jours et vous 
+                    avez une activité importante tout au long de la journée
+                </label>
+            </div>
+            <div class="activity">
+                <input class="champerreur2" name="activity" type="radio" id="choix5" value="5">
+                <label for="choix5">
+                    vous faites du sport tous les jours et plus
+                     d'une fois par jour ou vous avez un travail très physique
+                </label>
+            </div>
+         
+            <input type="submit" id="calcul" value="faire le bilan" style="padding:5px ; border-radius: 20px; background-color: #42dbd6; font-weight:bold; font-size:1em;"> 
+            <p style="color:red;" id="erreur"></p>
+        </form>
+        </div>
+    </section>
+    <center>
+        <main>
+        <h1>Votre besoin calorique journalier</h1>
+        <h2>Combien de calories avez-vous droit ? </h2>
+        <div class="rightimg"><img src="./res/besoincal.jpg" alt=""></div>
+        <div>
+         <p class="lefttext">Contrairement à ce que l’on peut penser, les calories ne sont pas 
+             là que pour nous gâcher la vie ! Qu’on le veuille ou non, nous en 
+             avons besoin : les calories nous fournissent l’énergie nécessaire
+              chaque jour pour couvrir les dépenses de notre organisme. Car oui, 
+              même si nous séchons bien souvent les cours de sport, notre corps brûle 
+              des calories même en dormant ! Pour perdre du poids de manière efficace, 
+              il faut donc veiller à équilibrer le nombre de calories consommées et le 
+              nombre de calories dépensées tout au long de la journée.
+        </p>
+        <p>
+            En revanche, vous vous demandez sûrement pourquoi votre ami par exemple  peut manger deux fois plus que vous sans grossir ? 
+            Parce que nous n’avons pas les mêmes besoins caloriques. Ils 
+            dépendent de notre âge, de notre sexe, de notre morphologie, 
+            de nos activités physiques, du moment de la journée où les 
+            calories ont été consommées… et de bien d’autres variables.
+        </p>
+        <p>
+            Voilà pourquoi il est inutile de commencer un régime ou de se 
+            fixer un quota de calories à consommer par jour sans connaître 
+            réellement ses propres besoins caloriques.
+        </p>
+        <p>Ce formulaire ci dessus vous permmet de connaître vos besoins 
+            caloriques journalier d'une façon précise.
+        </p>
+        </div>
+       <script src="./js/besoincal.js"></script>
+    </main>
+</center>
+<footer>
+    <center>
+    <p>Travail réaliser par "<strong> KHAIREDIDNE SATOURI </strong>" étudiant tunisien.</p>
+    <p>Tous les informations ont été écrites aprés des recherches personnelles depuis des références fiables.</p>
+ </center>
+    <div class="leftfooter">
+     <p style="font-size: 1.3em;padding-bottom: 5px;"> Contact :</p>
+ <a href="https://www.facebook.com/profile.php?id=100004369659961"><i class="fab fa-facebook-square"></i></a><br>
+ <a href="https://www.linkedin.com/in/khaireddine-satouri-ba80091ab/?lipi=urn%3Ali%3Apage%3Ad_flagship3_feed%3BagBNq71XRJ%2B8cfAEJYIdRA%3D%3D"><i class="fab fa-linkedin"></i></a>
+  </div>
+  <div class="rightfooter">
+ <p style="font-size: 1.3em; padding-bottom: 5px;">Référence :</p>
+ <li> <a href="https://www.who.int/fr">www.who.int</a> </li>
+ <li><a href="https://www.fourchette-et-bikini.fr/">www.fourchette-et-bikini.fr</a></li>
+ <li><a href="https://www.alpiniste.fr/">www.alpiniste.fr</a></li>
+ <li><a href="https://www.kalenji.fr/">www.kalenji.fr</a></li>
+ <li><a href="https://fr.wikihow.com/Accueil">fr.wikihow.com</a></li>
+ <li><a href="https://www.mangerbouger.fr/">www.mangerbouger.fr</a></li>
+  
+ </div>
+</footer>   
+
+</body>
+</html>

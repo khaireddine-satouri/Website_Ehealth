@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/8c3203e62c.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="./css/athlete.css">
+</head>
+<body>
+    
+        
+            <nav class="menu">
+                <div id="logo"><a class="logo1" href="./index.html"><i class="fas fa-laptop-medical"></i> Santé</a></div>
+                
+             <ul id="rmenu">
+                <li ><a class="menu-item" href="./index.html">À propos</a></li> 
+                <li ><a class="menu-item" href="#">Diagnostiques et bilans</a>
+                    <div class="content">
+                        <div class="drop">
+                            <ul>
+                              <li><a class="drop-item" href="./imc.html">Mon IMC</a></li>
+                              <li> <a class="drop-item" href="./img.html">Mon IMG</a></li>
+                              <li><a class="drop-item" href="./metabolisme.html">Ma catégorie de poids </a></li>
+                              <li><a class="drop-item" href="./besoincal.html">Mon besoin caloriques </a></li>
+                            </ul>
+                        </div> 
+                      </div> 
+                </li>
+                <li ><a class="menu-item" href="#">Nutrition</a>
+                    <div class="content">
+                        <div class="drop">
+                            <ul>
+                              <li><a class="drop-item" href="./malnutrition.html">La malnutrition en question</a></li>
+                              <li> <a class="drop-item" href="./equilibre.html">Equilibre et divresité alimentaire</a></li>
+                              <li><a class="drop-item" href="./regime.html">Régime alimentaire sain </a></li>
+                              <li><a class="drop-item" href="./nutsport.html">Guide de nutrition pour les sportif</a></li>
+                             
+                            </ul>
+                        </div> 
+                      </div>
+                </li>
+                <li ><a class="menu-item" id="active"  href="#">Sport et Exercices</a>
+                    <div class="content">
+                        <div class="drop">
+                            <ul>
+                              <li><a  class="drop-item" href="./athlete.html">Contrôler ma fréquence cardiaque</a></li>
+                              <li><a  class="drop-item" href="./precotion.html">Les précautions à prendre</a></li>
+                              <li> <a  class="drop-item" href="./exmaigrir.html">Bouger pour maigrir </a></li>
+                              <li   class="item2"><a class="drop-item" href="#">Exercices à domicile</a>  
+                               
+                                 <ul id="menuex">
+                                   <li><a  class="menuex-item" href="./exmuscle.html">Exercices pour renforcer les muscles</a></li>
+                                   <li><a  class="menuex-item" href="./exsouplesse.html">Exercices pour améliorer sa souplesse</a></li>
+                                   <li><a  class="menuex-item" href="./exarticulateur.html">Exercices pour améliorer sa mobilité articulaire</a></li>
+                                   
+                                 </ul>
+                               
+                              </li>
+                            </ul>
+                        </div> 
+                      </div></li>
+             </ul>
+            
+            </nav>
+           
+        <section class="background">
+            <div class="animation">
+                <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    
+    <form id="bilan"  onsubmit="return validiter(event)" >
+        <h2 class="title_form">Je calcul ma frequence cardiaque d'entrainement</h2>
+        <select name="sexe" id="sexe" required>
+            <option value="" disabled selected hidden>sexe</option>
+            <option  value="male" >Homme</option>
+            <option  value="femele">Femme</option>
+        
+        </select> <br>
+        <label for="age">Age :</label><br>
+        <input  type="number" id="age" placeholder="ans"required> <br>
+        <label for="poid">Poid :</label><br>
+        <input  type="number" id="poid" placeholder="kg"required> <br>
+        <label for="frequence">Fréquence cardiaque au repos :</label> <br>
+        <input  type="number" id="frequence" placeholder="pulsations/minute"required> <br>
+        <p id="info1">vous êtes un : </p><br>
+        
+        <div class="tsport">
+            <input calss="type_sportif" name="tsport" type="radio" id="choix11"  >
+            <label for="choix11">sportif confirmé</label>
+        </div>
+        <div class="tsport">
+            <input class="type_sportif" name="tsport" type="radio" id="choix12" >
+            <label for="choix12">sportif normal</label>
+        </div>
+  
+    
+        <p id="info2">vous faites un entraînement :</p><br>
+        <div calss="tentrainement">
+            <input calss="typeentrainement" name="tentrainement" type="radio" id="choix21" value="1" >
+            <label for="choix21">d'endurance intensif</label>
+        </div>
+        <div calss="tentrainement">
+            <input calss="typeentrainement" name="tentrainement" type="radio" id="choix22" value="2" >
+            <label for="choix22">d'endurance plus doux</label>
+        </div>
+        <div calss="tentrainement">
+            <input calss="typeentrainement" name="tentrainement" type="radio" id="choix23"  value="3">
+            <label for="choix23">vous êtes un débutant</label>
+        </div>
+   
+        <input type="submit" id="calcul" value="faire le bilan" style="padding:5px ; border-radius: 20px; background-color: #42dbd6; font-weight:bold; font-size:1em;"> 
+        <p style="color:red;" id="erreur"></p>
+    </form>
+    
+    
+</div>
+</section>
+<script src="./js/athlete.js"></script>
+<center>
+<main>
+    
+<p>La fréquence cardiaque est une mesure importante qui permet de <strong>diviser l'entraînement en différentes zones</strong> . Afin de définir ces zones, il est essentiel de connaître sa fréquence cardiaque maximale. Comme nous allons le voir par la suite, il existe plusieurs façons de la calculer.</p>
+<h2>Fréquence cardiaque au repos et fréquence cardique maximale
+</h2>
+<p>La fréquence cardiaque évolue entre deux valeurs limites, la fréquence cardiaque au repos et la fréquence cardiaque maximale. Comme son nom l'indique, le pouls au repos correspond à la fréquence cardiaque mesurée au repos. Elle se situe entre 50 et 100 battements par minute pour un adulte en bonne santé. Les athlètes de fond peuvent faire descendre leur fréquence cardiaque à 30 pulsations par minute. Une fréquence cardiaque au repos de plus de 100 pulsations par minute est signe de tachycardie et doit être diagnostiquée par un médecin.
+</p>
+<p>La fréquence cardiaque maximale constitue quant à elle la valeur limite que notre cœur est capable d'atteindre. Elle varie d'un individu à l'autre car elle dépend de l'âge, du sexe, des prédispositions génétiques, du niveau d'entraînement et de la forme physique du jour. Parce qu'elle varie beaucoup, il est difficile de dire si une fréquence cardiaque maximale élevée est une bonne ou une mauvaise chose. Mais il faut toutefois faire attention. S'entraîner trop longtemps ou trop souvent en utilisant sa fréquence cardiaque maximale peut être dangereux. Un entraînement fractionné ou une courte phase d'entraînement intensif suffira aux sportifs amateurs.
+</p>
+<h2>MESURER SA FRÉQUENCE CARDIAQUE
+</h2>
+<p>Il existe plusieurs méthodes pour mesurer sa fréquence cardiaque. La première est <strong>une mesure manuelle</strong>. On pose son index, son majeur et son annulaire sur sa gorge et l'on compte le nombre de pulsations pendant 15 secondes. On multiplie par quatre et on obtient le pouls. Cette méthode permet de mesurer facilement la fréquence cardiaque au repos. L'idéal est de la mesure le matin au repose, avant d'être totalement actif. Il est également possible de porter une montre de sport comportant un capteur cardiaque pour mesurer sa fréquence cardiaque en temps réel.
+</p>
+<p>Cette façon de mesurer la fréquence cardiaque est également pratique pour déterminer la fréquence cardiaque maximale. Pour cela, un entraînement sous contrainte maximale, ou <strong>diagnostic de performance</strong>, est effectué sous contrôle médical. Il s'agit d'augmenter progressivement l'effort fourni jusqu'au point de rupture. La fréquence cardiaque mesurée à ce moment-là est la fréquence cardiaque maximale.</p>
+<p>Comme il n'est pas toujours possible d'effectuer un diagnostic de performance, d'autant que cela coûte une certaine somme, il existe d'autres façons de déterminer sa fréquence cardiaque maximale en s'approchant le plus possible de la mesure exacte.
+</p>
+<h2>Comment calculer la fréquence cardiaque maximale ?
+</h2>
+<p>Au fil des ans, de nombreux organismes, chercheurs et entraîneurs ont essayé de développer une méthode qui permettrait de déterminer au mieux la fréquence cardiaque maximale. Mais cela reste difficile en raison de son extrême variabilité, ce que nous avons vu plus haut. Les valeurs données par notre calculateur sont des valeurs moyennes qui peuvent fortement varier en fonction de l'âge, de la fréquence cardiaque au repos et du poids.
+</p>
+<h3>La formule la plus connue
+</h3>
+<p class="formule">Fréquence cardiaque maximale = 220 - Âge</p>
+<p>Cette formule fournit souvent des résultats erronés. Elle est bien trop simple et donc bien trop inexacte.</p>
+<h3>Calcul de la fréquence cardiaque maximale d'aprés SALLY EDWARDS
+</h3>
+<p>Cette formule est à la base de notre calculateur et prend en compte les variables que sont le genre, l'âge et le poids.
+</p>
+<p class="formule">Homme : Fréquence cardiaque maximale = 214 - 0,5 x Âge - 0,11 x Poids en kg <br>
+    Femme : Fréquence cardiaque maximale = 210 - 0,5 x Âge - 0,11 x Poids en kg
+</p>
+<h3>Calcul de la fréquence cardiaque maximale d'aprés WINFRIED SPANAUS</h3>
+<p>La formule de Winfried Spanaus a été testée et développée à partir de 600 sujets et s'adresse plutôt à des sportifs expérimentés.
+</p>
+<p class="formule">Homme : Fréquence cardiaque maximale = 223 - 0,9 x Âge <br>
+    Femme : Fréquence cardiaque maximale = 226 - 0,9 x Âge
+</p>
+<h2>Fréquence cardiaque d'entraînement optimale</h2>
+<p>Passons à la pratique : comment trouver la parfaite fréquence cardiaque d'entraînement ? <strong>La méthode de Karvonen</strong> est ici applicable. Cette méthode utilise la fréquence cardiaque comme indicateur pour définir les zones où l'on parle de fréquence cardiaque au repos et de fréquence cardiaque maximale (d'après Edwards). La formule est la suivante :
+</p>
+<p class="formule">Fréquence cardiaque d'entraînement = (FCmax - FC au repos) x Coefficient + Fréquence cardiaque au repos</p>
+<p>
+Comme il existe différents types d'entraînement d'endurance, l'entraînement d'endurance de base ou l'entraînement d'endurance aérobie par exemple, il faut utiliser un coefficient qui permet de changer les résultats. Voici les coefficients établis par Karvonen :</p>
+<li>Pour un entraînement d'endurance intensif : 0,8
+</li>
+<li>Pour un entraînement d'endurance plus doux : 0,6
+</li>
+<li>Pour les débutants : 0,5
+</li>
+<p>Ainsi, avec une fréquence cardiaque au repos de 70, une fréquence cardiaque maximale de 190 et un niveau d'entraînement plutôt digne d'un débutant, il est recommandé de s'entraîner avec une fréquence cardiaque de 130 pulsations par minute. On utilise aujourd'hui en science du sport des <strong>zones de fréquence cardiaque</strong> pour s'aider. Elles sont délimitées par différents pourcentages de la fréquence cardiaque maximale. Selon les sources, celles-ci correspondent également à des <strong>zones d'entraînement</strong>. Celles-ci vont de l'échauffement/récupération à la résistance dure en passant par l'endurance fondamentale, active, et la haute performance.
+</p>
+<div class="table-scroll">
+    <table class="table-center">
+    <caption>Les zones de fréquence cardiaque</caption>
+    <thead>
+    <tr>
+    <th>% de la fréquence cardiaque maximale</th>
+    <th>Zone de sollicitation</th>
+    <th>Zone d'entraînement</th>
+    <th>Description</th></tr></thead>
+    <tbody>
+    <tr>
+    <td>50-60%</td>
+    <td><strong>Zone du cœur sain</strong></td>
+    <td>Échauffement &amp; Récupération</td>
+    <td>Renforcement du système cardiovasculaire. Idéal pour les débutants.</td></tr>
+    <tr>
+    <td>60-70%</td>
+    <td><strong>Zone d'utilisation des graisses</strong></td>
+    <td>Endurance fondamentale - Entraînement 1</td>
+    <td>Utilisation maximale des graisses. Renforcement du système cardiovasculaire et amélioration de la condition physique.</td></tr>
+    <tr>
+    <td>70-80%</td>
+    <td><strong>Zone aérobie</strong></td>
+    <td>Endurance active - Entraînement 1 à 2</td>
+    <td>Renforcement du cœur et des poumons. Idéal pour travailler son endurance.</td></tr>
+    <tr>
+    <td>80-90%</td>
+    <td><strong>Zone anaérobie</strong></td>
+    <td>Haute performance (Entraînement 2)</td>
+    <td>Le corps ne peut plus couvrir son besoin en oxygène. Les sportifs de haut niveau s'entraînent dans cette zone sur une courte durée pour un gain de performance maximum.</td></tr>
+    <tr>
+    <td>90-100%</td>
+    <td><strong>Zone rouge</strong></td>
+    <td>Résistance dure</td>
+    <td>On se rapproche de la fréquence cardiaque maximale. Cette zone est dangereuse pour les sportifs amateurs !</td></tr></tbody>
+</table>
+</div>
+<p>Il apparaît rapidement que la BONNE fréquence cardiaque d'entraînement dépend toujours de la zone d'entraînement. Pour les débutants qui souhaitent renforcer leur système cardiovasculaire, c'est la zone du cœur sain qui est recommandée. Pour améliorer sa vitesse, c'est la zone d'entraînement anaérobie qui est conseillée. Il est par ailleurs essentiel de s'orienter en fonction du sport pratiqué. Un sprinter se situera bien plus souvent en zone d'entraînement anaérobie qu'un coureur de marathon pour qui la zone aérobie est la plus pertinente. De nombreux autres facteurs individuels comme la forme physique du jour influent par ailleurs sur la fréquence cardiaque de sorte que celle-ci pourra varier d'un jour à l'autre.</p>
+<p>Après l'effort, la fréquence cardiaque redescend généralement rapidement sous les 100 pulsations. Si la fréquence cardiaque demeure élevée et supérieure à 100 pulsations/minute au bout de plusieurs minutes, cela témoigne d'une mauvaise condition physique. De tels <strong>efforts physiques</strong> doivent être évités car ils représentent un effort trop important pour le système cardiovasculaire. Votre fréquence cardiaque varie de façon inhabituelle ? Consultez un médecin sans attendre.</p>
+
+</main>
+</center>
+<footer>
+    <center>
+    <p>Travail réaliser par "<strong> KHAIREDIDNE SATOURI </strong>" étudiant tunisien.</p>
+    <p>Tous les informations ont été écrites aprés des recherches personnelles depuis des références fiables.</p>
+ </center>
+    <div class="leftfooter">
+     <p style="font-size: 1.3em;padding-bottom: 5px;"> Contact :</p>
+ <a href="https://www.facebook.com/profile.php?id=100004369659961"><i class="fab fa-facebook-square"></i></a><br>
+ <a href="https://www.linkedin.com/in/khaireddine-satouri-ba80091ab/?lipi=urn%3Ali%3Apage%3Ad_flagship3_feed%3BagBNq71XRJ%2B8cfAEJYIdRA%3D%3D"><i class="fab fa-linkedin"></i></a>
+  </div>
+  <div class="rightfooter">
+ <p style="font-size: 1.3em; padding-bottom: 5px;">Référence :</p>
+ <li> <a href="https://www.who.int/fr">www.who.int</a> </li>
+ <li><a href="https://www.fourchette-et-bikini.fr/">www.fourchette-et-bikini.fr</a></li>
+ <li><a href="https://www.alpiniste.fr/">www.alpiniste.fr</a></li>
+ <li><a href="https://www.kalenji.fr/">www.kalenji.fr</a></li>
+ <li><a href="https://fr.wikihow.com/Accueil">fr.wikihow.com</a></li>
+ <li><a href="https://www.mangerbouger.fr/">www.mangerbouger.fr</a></li>
+  
+ </div>
+</footer>   
+</body>
+</html>
