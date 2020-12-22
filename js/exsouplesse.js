@@ -40,6 +40,11 @@ ex1dos.addEventListener("click", () => {
     exdos3detail.style.display = "none";
     exdos2detail.style.display = "block"; 
    })
+   ex3dos.addEventListener("click", () => {
+    exdos1detail.style.display = "none";
+    exdos2detail.style.display = "none";
+    exdos3detail.style.display = "block"; 
+   })
    
    let ex1jambe=document.getElementById("exjambe1");
 let ex2jambe=document.getElementById("exjambe2");
